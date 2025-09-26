@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <table style="width:100%;max-width:830px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tbody>
             <tr style="padding:0px">
                 <td style="padding:0px">
@@ -27,7 +27,7 @@
                                         Before that, I received my bachelor’s degree in Electronic Information Engineering at <a href="https://www.ahu.edu.cn/">Anhui University</a>.
                                     </p>
                                     <p>
-                                        My research interests include 3D computer vision and medical 3D modeling. Some papers are <span class="highlight">highlighted</span>.
+                                        My research interests include 3D computer vision and medical image analysis.
                                     </p>
                                     <p style="text-align:center">
                                         <a href="mailto:wenxuzhou@mail.ustc.edu.cn">Email</a> &nbsp;/&nbsp;
@@ -63,6 +63,84 @@
                             <tr onmouseout="ever_stop()" onmouseover="ever_start()">
                                 <td style="padding:16px;width:20%;vertical-align:middle">
                                     <div class="one">
+                                        <img src='paper/IL3D.png' width=100%>
+                                    </div>
+                                    <script type="text/javascript">
+                                        function ever_start() {
+                                            document.getElementById('ever_image').style.opacity = "1";
+                                        }
+                                        function ever_stop() {
+                                            document.getElementById('ever_image').style.opacity = "0";
+                                        }
+                                        ever_stop()
+                                    </script>
+                                </td>
+                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                    <span class="papertitle">IL3D: A Large-scale indoor layout dataset for LLM-Driven 3D Scene Generation</span>
+                                    <br>
+                                    <strong>Wenxu Zhou</strong>,
+                                    Kaixuan Nie,
+                                    Hang Du, 
+                                    <a href="https://eeis.ustc.edu.cn/2015/0721/c2615a19458/page.htm">Dong Yin</a>,
+                                    Wei Huang,
+                                    Siqiang Guo,
+                                    Xiaobo Zhang,
+                                    Pengbo Hu
+                                    <br>
+                                    <em>ArXiv</em>, 2025 (Paper Under Review)
+                                    <br>
+                                    <a href="">project page</a>
+                                    /
+                                    <a href="">ArXiv</a>
+                                    <p></p>
+                                    <p>
+                                        IL3D, a large-scale dataset with 27,816 indoor layouts and 29,215 3D assets, supports LLM-driven 3D scene generation. It includes natural language annotations and rigorous benchmarks, enhancing the 3D scene generation task.
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+                                <td style="padding:16px;width:20%;vertical-align:middle">
+                                    <div class="one">
+                                        <img src='paper/RoomGen.png' width=100%>
+                                    </div>
+                                    <script type="text/javascript">
+                                        function ever_start() {
+                                            document.getElementById('ever_image').style.opacity = "1";
+                                        }
+                                        function ever_stop() {
+                                            document.getElementById('ever_image').style.opacity = "0";
+                                        }
+                                        ever_stop()
+                                    </script>
+                                </td>
+                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                    <span class="papertitle">RoomGen: Text-Driven Agentic 3D In-door Scene Synthesis and Editing</span>
+                                    <br>
+                                    Pengbo Hu,
+                                    <strong>Wenxu Zhou</strong>,
+                                    Kaixuan Nie,
+                                    Hang Du,
+                                    <a href="https://eeis.ustc.edu.cn/2015/0721/c2615a19458/page.htm">Dong Yin</a>,
+                                    Siqiang Guo,
+                                    Xiaobo Zhang,
+                                    Wei Huang
+                                    <br>
+                                    <em>ArXiv</em>, 2025 (Paper Under Review)
+                                    <br>
+                                    <a href="">project page</a>
+                                    /
+                                    <a href="">ArXiv</a>
+                                    <p></p>
+                                    <p>
+                                        We propose an agent-based, sequential object placement framework for 3D indoor scene generation supports incremental editing and uses a solver fusing semantic and visual cues to produce more plausible, consistent, and realistic layouts.
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+                                <td style="padding:16px;width:20%;vertical-align:middle">
+                                    <div class="one">
                                         <img src='paper/EndoLGS.png' width=100%>
                                     </div>
                                     <script type="text/javascript">
@@ -81,7 +159,7 @@
                                     <strong>Wenxu Zhou</strong>,
                                     <a href="https://eeis.ustc.edu.cn/2015/0721/c2615a19458/page.htm">Dong Yin</a>
                                     <br>
-                                    <em>BIBM</em>, 2025 &nbsp (Under Review)
+                                    (Paper Under Review)
                                     <p></p>
                                     <p>
                                         EndoLGS, a 4D Language Gaussian Splatting for endoscopic scenes dynamic reconstruction and semantic understanding, shows significant potential for robot-assisted surgery.
@@ -144,7 +222,7 @@
                                 <td style="padding:8px;width:60%;vertical-align:middle">
                                     Research on Efficient Modeling and Lesion Recognition in Gastroscopic Scenarios
                                     <br>
-                                    Funding: HM2025G14 (CNY 300,000)
+                                    Funding: XXXXX (CNY 300,000)
                                     <br>
                                     Period: Jun 2025 - May 2026, Status: In Progress
                                     <br>
