@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IL3D</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="css/bulma-slider.min.css">
+  <link rel="stylesheet" href="css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <script defer src="js/fontawesome.all.min.js"></script>
+  <script src="js/bulma-carousel.min.js"></script>
+  <script src="js/bulma-slider.min.js"></script>
+  <script src="js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">IL3D: A Large-scale indoor layout dataset for LLM-Driven 3D Scene Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                <a href="https://wenxuzhou.github.io/">Wenxu Zhou</a><sup>1</sup>,</span>
+                Kaixuan Nie<sup>2</sup>,</span>
+                Hang Du<sup>3</sup>,</span>
+                <a href="https://eeis.ustc.edu.cn/2015/0721/c2615a19458/page.htm">Dong Yin</a><sup>1</sup>,</span>
+                Wei Huang<sup>2</sup>,</span>
+                Siqiang Guo<sup>2</sup>,</span>
+                Xiaobo Zhang<sup>2</sup>,</span>
+                Pengbo Hu<sup>1,2,&dagger;</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>USTC,</span>
+            <span class="author-block"><sup>2</sup>Songying Technology,</span>
+            <span class="author-block"><sup>3</sup>BICE</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/WenxuZhou/IL3D"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/WenxuZhou/IL3D"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this study, we present IL3D, a large-scale dataset meticulously designed for large language model (LLM)-driven 3D scene generation, addressing the pressing demand for diverse, high-quality training data in indoor layout design. Comprising 27,816 indoor layouts across 18 prevalent room types and a library of 29,215 high-fidelity 3D object assets, IL3D is enriched with instance-level natural language annotations to support robust multimodal learning for vision-language tasks. We establish rigorous benchmarks to evaluate LLM-driven scene generation. Experimental results show that supervised fine-tuning (SFT) of LLMs on IL3D significantly improves generalization and surpasses the performance of SFT on other datasets. IL3D offers flexible multimodal data export capabilities, including point clouds, 3D bounding boxes, multiview images, depth maps, normal maps, and semantic masks, enabling seamless adaptation to various visual tasks. As a versatile and robust resource, IL3D significantly advances research in 3D scene generation and embodied intelligence, by providing high-fidelity scene data to support environment perception tasks of embodied agents.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+        <div class="columns is-centered">
+        <div class="column is-full-width">
+            <h2 class="title is-3">Data Analysis</h2>
+        </div>
+        </div>
+
+        <div class="columns is-centered">
+        <div class="column is-full-width">
+            <h2 class="title is-5">Room Type</h2>
+            <div class="content has-text-justified">
+            <p>
+                The IL3D dataset contains over 27,000 samples, covering 18 room types. Among these samples, synthetic data accounts for approximately 20–30\% of the total. This not only strategically expands the coverage of indoor scene categories but also fosters the robustness of LLM-driven scene generation and other visual tasks by reducing potential biases in model training.
+            </p>
+            </div>
+            <div class="content has-text-centered">
+                <img src="images/room_num.png" alt="room_num" style="width: 80%;">
+            </div>
+            <h2 class="title is-5">Object Numbers per Room</h2>
+            <div class="content has-text-justified">
+            <p>
+                The number of objects in rooms within the dataset mainly ranges from 4 to 9. Rooms containing 5 objects are the most common, with a count of 3,594; this number primarily corresponds to the most typical indoor room types, such as living rooms and bedrooms.
+            </p>
+            </div>
+            <div class="content has-text-centered">
+                <img src="images/room_obj.png" alt="room_obj" style="width: 80%;">
+            </div>
+        </div>
+        </div>
+
+        <div class="columns is-centered">
+        <div class="column">
+            <h2 class="title is-5">Room Area Distribution</h2>
+            <div class="content has-text-justified">
+            <p>
+                Most room types exhibit a multi-peak feature, reflecting the standardization of architectural design and the diversity of functional requirements. For example, the distribution of bathrooms and kitchens shows a significant peak around 5–15 square meters, embodying their compact design that prioritizes practicality; in contrast, larger spaces such as living rooms and garages have a wider distribution, with peaks exceeding 20 square meters, adapting to diverse furniture layouts and vehicle storage needs.
+            </p>
+            </div>
+            <div class="columns is-centered">
+            <div class="column content">
+                <img src="images/room_area.png" alt="room_area" style="width: 100%;">
+            </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <h2 class="title is-5">Navigable Area Distribution</h2>
+            <div class="content has-text-justified">
+            <p>
+                Navigable area distributions are shifted leftward compared to the total area, with reduced peak density and a narrowed range, highlighting the significant impact of fixed facilities, furniture, and built-in elements on non-navigable areas. For instance, the navigable area of kitchens and dining rooms is reduced by approximately 20–30\% compared to their total area, which may be attributed to cabinets and appliances; meanwhile, open spaces such as atriums and entertainment rooms maintain a high proportion of navigable area.
+            </p>
+            </div>
+            <div class="columns is-centered">
+            <div class="column content">
+                <img src="images/navigable_area.png" alt="nav_area" style="width: 100%;">
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <h2 class="title is-5">Asset Category</h2>
+        <div class="content has-text-justified">
+            <p>
+                The categories quantity distribution of various object categories, sorted in descending order of quantity, highlighting the dominant status of certain objects in the dataset. For example, the "Others" category—comprising daily miscellaneous items such as seats and carpets - ranks first with more than 4,000 instances, reflecting the universality and functional necessity of these objects in daily indoor spaces. It is followed by furniture categories such as sofas and tables, whose quantities gradually decrease from common to rare types until approaching zero. This long-tailed distribution indicates that the dataset captures the frequency pattern of objects in the real world: a small number of high-frequency objects (e.g., seating and storage items) dominate, while a large number of low-frequency objects (e.g., specific decorative items) contribute to diversity. This characteristic embodies the hierarchical and personalized features of indoor design.
+            </p>
+        </div>
+        <div class="content has-text-centered">
+            <img src="images/obj_num.png" alt="room_obj" style="width: 80%;">
+        </div>
+    
+        <div class="columns is-centered">
+        <div class="column">
+            <h2 class="title is-5">Bounding Box Diagonal Length Distribution</h2>
+            <div class="content has-text-justified">
+            <p>
+                Small categories, such as fresh fruits, French fries and food measuring tools, exhibit narrow distributions, indicating their consistent and compact dimensions, which are typical of desktop or handheld items. In contrast, large furniture categories (e.g., sofas, beds, and cabinets) display wide distribution ranges, reflecting size variations from compact to spacious designs. This characteristic is critical for 3D scene understanding algorithms, as it enables them to handle spatial layouts of multiple scales.
+            </p>
+            </div>
+            <div class="columns is-centered">
+            <div class="column content">
+                <img src="images/obj_diag.png" alt="room_area" style="width: 100%;">
+            </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <h2 class="title is-5">Bounding Box Volume Distribution</h2>
+            <div class="content has-text-justified">
+                <p>
+                    Categories with high morphological variability exhibit broad volume distributions, which reflects the impact of modular or customizable designs on occlusion and interaction modeling. In contrast, categories such as beverages, computers, and musical instruments have narrow volume distributions, emphasizing their standardized dimensions in the real world. This standardization facilitates accurate semantic segmentation and functional prediction in indoor 3D perception systems.
+                </p>
+            </div>
+            <div class="columns is-centered">
+            <div class="column content">
+                <img src="images/obj_volume.png" alt="nav_area" style="width: 100%;">
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+        <div class="columns is-centered">
+        <div class="column is-full-width">
+            <h2 class="title is-3">LLM-Driven 3D Scene Generation</h2>
+            <div class="content has-text-justified">
+                <p>
+                    The scene generation process was divided into two stages: 3D asset retrieval and scene layout generation. To study the influence of natural language annotations on the spatial reasoning ability of LLMs, we adopted a "retrieval-then-generation" strategy—first retrieving object information in the scene based on text descriptions, then using the SFT-tuned LLM for reasoning and generation.
+                </p>
+            </div>
+        </div>
+        </div>
+
+        <h2 class="title is-5">Main Results</h2>
+        <div class="content has-text-justified">
+            <p>
+                Main experimental results: Comparison of performance in objective and subjective metrics across I-Design, Holodeck and Qwen3-14B (Supervised Fine-Tuning on IL3D).
+            </p>
+        </div>
+        <div class="columns is-centered">
+        <div class="column content">
+            <img src="images/main_res.png" alt="room_area" style="width: 100%;">
+        </div>
+        </div>
+
+        <h2 class="title is-5">Ablation Study</h2>
+        <div class="content has-text-justified">
+            <p>
+                Left: Comparison of performance in objective indicators for Supervised Fine-Tuning with Qwen3-1.7B on datasets of different scales. Right: Comparison of performance in objective indicators for Supervised Fine-Tuning of different Qwen3 models on the IL3D dataset.
+            </p>
+        </div>
+        <div class="columns is-centered">
+        <div class="column content">
+            <img src="images/ablation_res.png" alt="ablation_res" style="width: 100%;">
+        </div>
+        </div>
+
+        <h2 class="title is-5">Generation Results</h2>
+        <div class="columns is-centered">
+            <div class="column">
+                <h2 class="title is-5">Bedroom</h2>
+                <div class="content has-text-justified">
+                    <p style="font-size: 0.7rem;">
+                        Prompt: "A queen-sized oak bed with a floral headboard sits against the far wall, flanked by two white nightstands with brass lamps. A tall wooden dresser with a mirror stands in the corner, while a small reading chair with an ottoman occupies the space near the window."
+                    </p>
+                </div>
+                <div class="column content">
+                    <video id="matting-video" autoplay muted loop playsinline style="width: 100%; max-height: 400px;">
+                        <source src="videos/bedroom.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="content">
+                    <h2 class="title is-5">Livingroom</h2>
+                    <div class="content has-text-justified">
+                        <p style="font-size: 0.7rem;">
+                            Prompt: "A sleek sofa with clean lines sits against one wall, facing a minimalist TV mounted on the opposite wall. A black coffee table with a glass top sits on a textured rug, while a gray armchair, a side table with a modern lamp, and a potted orchid add sophisticated touches."
+                        </p>
+                    </div>
+                    <video id="dollyzoom" autoplay muted loop playsinline style="width: 100%; max-height: 400px;">
+                        <source src="videos/livingroom.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="column">
+                <h2 class="title is-5">Kitchen</h2>
+                <div class="content has-text-justified">
+                    <p style="font-size: 0.7rem;">
+                        Prompt: "The minimalist kitchen has white cabinetry with touch-latch doors, a hidden refrigerator, and induction cooktop. A sleek island with an integrated sink provides workspace, while a toaster, electric kettle, and two minimalist bar stools maintain the clean look."
+                    </p>
+                </div>
+                <div class="column content">
+                    <video id="matting-video-2" autoplay muted loop playsinline style="width: 100%; max-height: 400px;">
+                        <source src="videos/kitchen.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="column">
+                <h2 class="title is-5">Bathroom</h2>
+                <div class="content has-text-justified">
+                    <p style="font-size: 0.7rem;">
+                        Prompt: "The tiny bathroom in a studio apartment contains a corner shower with a clear curtain, a compact toilet, and a wall-mounted sink with a small shelf. A mirrored medicine cabinet provides storage, while a towel hook, toilet paper holder, and soap dispenser save space."
+                    </p>
+                </div>
+                <div class="column content">
+                    <video id="video-1" autoplay muted loop playsinline style="width: 100%; max-height: 400px;">
+                        <source src="videos/bathroom.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="content">
+                    <h2 class="title is-5">Balcony</h2>
+                    <div class="content has-text-justified">
+                        <p style="font-size: 0.7rem;">
+                            Prompt: "A plant-filled balcony has a wooden railing draped with flowering vines, surrounding a small metal bench. Some potted plants of various sizes line the floor, while a hanging macramé plant holder suspends a fern from the ceiling, and a small watering can sits in the corner."
+                        </p>
+                    </div>
+                    <video id="video-2" autoplay muted loop playsinline style="width: 100%; max-height: 400px;">
+                        <source src="videos/balcony.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="column">
+                <h2 class="title is-5">Diningroom</h2>
+                <div class="content has-text-justified">
+                    <p style="font-size: 0.7rem;">
+                        Prompt: "A modern dining area showcases a rectangular table with a light brown top and sleek metal legs, accompanied by several chairs. A chandelier hangs above the table. Along one wall, a dark-toned credenza with a smooth surface provides storage, while a small potted plant rests in the corner."
+                    </p>
+                </div>
+                <div class="column content">
+                    <video id="video-3" autoplay muted loop playsinline style="width: 100%; max-height: 400px;">
+                        <source src="videos/diningroom.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+        <div class="columns is-centered">
+        <div class="column is-full-width">
+            <h2 class="title is-3">Text Readability</h2>
+            <div class="content has-text-justified">
+                <p>
+                    The text representation of Universal Scene Description (USD) organizes objects and their transformations (e.g., translation and scaling attributes) in indoor scenes via an ASCII-based structure, ensuring high readability. This feature enables direct editing of object positions and dimensions, facilitating debugging and collaborative design workflows. The corresponding 3D visualization aligns precisely with the text data, demonstrating how the structured format of USD supports the accuracy of spatial mapping and rapid prototyping in the development of 3D scenes, particularly in complex indoor environments. Beyond boosting the efficiency of manual editing and debugging, this readability also forms a foundation for LLM-driven 3D scene generation. By parsing USD’s hierarchical text, LLMs can interpret object relationships and transformation parameters to generate or optimize scene layouts. For example, guided by natural language instructions, LLMs can dynamically adjust object positions or introduce new elements, leveraging USD’s structure to enable automated scene design.
+                </p>
+            </div>
+            <div class="content has-text-centered">
+                <img src="images/usd.png" alt="multimodal" style="width: 100%;">
+            </div>
+        </div>
+        </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+        <div class="columns is-centered">
+        <div class="column is-full-width">
+            <h2 class="title is-3">Multimodal Data Export</h2>
+            <div class="content has-text-justified">
+                <p>
+                    IL3D offers flexible multimodal data export capabilities, including point clouds, 3D bounding boxes, multiview images, depth maps, normal maps, and semantic masks, enabling seamless adaptation to various visual tasks.
+                </p>
+            </div>
+            <div class="content has-text-centered">
+                <img src="images/mm_data.png" alt="multimodal" style="width: 60%;">
+            </div>
+        </div>
+        </div>
+
+        <div class="columns is-centered">
+        <div class="column">
+            <h2 class="title is-5">Color Image</h2>
+            <div class="columns is-centered">
+            <div class="column content">
+                <video id="matting-video" autoplay muted loop playsinline style="width: 100%; max-height: 400px;">
+                <source src="videos/color.mp4" type="video/mp4">
+                </video>
+            </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="content">
+            <h2 class="title is-5">Depth Map</h2>
+            <video id="dollyzoom" autoplay muted loop playsinline style="width: 100%; max-height: 400px;">
+                <source src="videos/depth.mp4" type="video/mp4">
+            </video>
+            </div>
+        </div>
+
+        <div class="column">
+            <h2 class="title is-5">Normal Map</h2>
+            <div class="column content">
+                <video id="matting-video" autoplay muted loop playsinline style="width: 100%; max-height: 400px;">
+                <source src="videos/normal.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="column">
+            <h2 class="title is-5">Semantic Mask</h2>
+            <div class="column content">
+                <video id="matting-video" autoplay muted loop playsinline style="width: 100%; max-height: 400px;">
+                <source src="videos/mask.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+        <div class="column is-full-width">
+            <h2 class="title is-3">Related Links</h2>
+
+            <div class="content has-text-justified">
+            <ul>
+                <li><a href="https://www.nvidia.cn/omniverse/usd/">NVIDIA OpenUSD</a></li>
+                <li><a href="https://huggingface.co/Qwen">Qwen3 series models</a></li>
+                <li><a href="https://3dlg-hcvc.github.io/hssd/">Habitat Synthetic Scenes Dataset (HSSD)</a></li>
+                <li><a href="https://tianchi.aliyun.com/specials/promotion/alibaba-3d-scene-dataset">3D-FRONT: 3D Furnished Rooms with layOuts and semaNTics</a></li>
+                <li><a href="https://atcelen.github.io/I-Design/">I-Design: Personalized LLM Interior Designer</a></li>
+                <li><a href="https://yueyang1996.github.io/holodeck/">Holodeck: Language Guided Generation of 3D Embodied AI Environments</a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{,
+  author    = {},
+  title     = {},
+  journal   = {},
+  year      = {},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/WenxuZhou/IL3D" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            Website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. Thanks for their effort.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
