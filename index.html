@@ -49,6 +49,45 @@
                         <tbody>
                             <tr>
                                 <td style="padding:16px;width:100%;vertical-align:middle">
+                                    <h2 style="margin-bottom: 10px;">News</h2>
+                                    <ul>
+                                        <li><b style="display: inline-block; min-width: 100px; font-family: monospace;">[Nov. 2025]</b> One paper accepted to BIBM 2025.</li>
+                                        <li><b style="display: inline-block; min-width: 100px; font-family: monospace;">[Sep. 2025]</b> One paper accepted to PRCV 2025.</li>
+                                        <li><b style="display: inline-block; min-width: 100px; font-family: monospace;">[Aug. 2025]</b> Served as a reviewer for AAAI 2026.</li>
+                                        <div id="more-news" style="display: none;">
+                                            <li><b style="display: inline-block; min-width: 100px; font-family: monospace;">[Jul. 2025]</b> Served as a reviewer for PRCV 2025.</li>
+                                            <li><b style="display: inline-block; min-width: 100px; font-family: monospace;">[Sep. 2024]</b> Worked as a teaching assistant for the professional course "Data Structures and Algorithms".</li>
+                                        </div>
+                                    </ul>
+                                    <div style="text-align: right; margin-right: 20px;">
+                                        <a href="javascript:void(0)" onclick="toggleNews()" id="news-toggle" style="text-decoration: none; font-size: small; color: #1772d0;" onmouseover="this.style.color='#f09228'" onmouseout="this.style.color='#1772d0'">
+                                            [ Show All ]
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <script>
+                    function toggleNews() {
+                        var moreNews = document.getElementById("more-news");
+                        var toggleLink = document.getElementById("news-toggle");
+                        
+                        if (moreNews.style.display === "none") {
+                            moreNews.style.display = "block";
+                            toggleLink.textContent = "[ Show Less ]";
+                        } else {
+                            moreNews.style.display = "none";
+                            toggleLink.textContent = "[ Show All ]";
+                        }
+                    }
+                    </script>
+                    
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tbody>
+                            <tr>
+                                <td style="padding:16px;width:100%;vertical-align:middle">
                                     <h2>Publications</h2>
                                 </td>
                             </tr>
