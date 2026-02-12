@@ -73,7 +73,6 @@
                     function toggleNews() {
                         var moreNews = document.getElementById("more-news");
                         var toggleLink = document.getElementById("news-toggle");
-                        
                         if (moreNews.style.display === "none") {
                             moreNews.style.display = "block";
                             toggleLink.textContent = "[ Show Less ]";
@@ -96,123 +95,53 @@
 
                     <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
-
-                            <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+                            <tr>
                                 <td style="padding:16px;width:20%;vertical-align:middle">
-                                    <div class="one">
-                                        <img src='paper/IL3D.png' width=100%>
-                                    </div>
-                                    <script type="text/javascript">
-                                        function ever_start() {
-                                            document.getElementById('ever_image').style.opacity = "1";
-                                        }
-                                        function ever_stop() {
-                                            document.getElementById('ever_image').style.opacity = "0";
-                                        }
-                                        ever_stop()
-                                    </script>
+                                    <div class="one"><img src='paper/IL3D.png' width=100%></div>
                                 </td>
                                 <td style="padding:8px;width:80%;vertical-align:middle">
                                     <span class="papertitle"><a href="https://arxiv.org/abs/2510.12095">IL3D: A Large-scale indoor layout dataset for LLM-Driven 3D Scene Generation</a></span>
                                     <br>
-                                    <strong>Wenxu Zhou</strong>,
-                                    <a>Kaixuan Nie</a>,
-                                    <a>Hang Du</a>, 
-                                    <a href="https://eeis.ustc.edu.cn/2015/0721/c2615a19458/page.htm">Dong Yin</a>,
-                                    <a>Wei Huang</a>,
-                                    <a>Siqiang Guo</a>,
-                                    <a>Xiaobo Zhang</a>,
-                                    <a href="https://scholar.google.com/citations?user=MqBow7QAAAAJ&hl=zh-CN&oi=ao">Pengbo Hu</a>
+                                    <strong>Wenxu Zhou</strong>, Kaixuan Nie, Hang Du, <a href="https://eeis.ustc.edu.cn/2015/0721/c2615a19458/page.htm">Dong Yin</a>, Wei Huang, Siqiang Guo, Xiaobo Zhang, <a href="https://scholar.google.com/citations?user=MqBow7QAAAAJ&hl=zh-CN&oi=ao">Pengbo Hu</a>
                                     <br>
                                     <em>arXiv</em>, 2025
                                     <br>
-                                    <a href="project/IL3D">project page</a>
-                                    /
-                                    <a href="https://arxiv.org/abs/2510.12095">arXiv</a>
-                                    /
-                                    <a href="javascript:void(0)" onclick="showBibtex('il3d')">BibTeX</a>
-                                    /
-                                    <a href="https://github.com/WenxuZhou/IL3D">code</a>
-                                    /
-                                    <a href="https://huggingface.co/datasets/WenxuZhou/IL3D">dataset</a>
-                                    <p></p>
-                                    <p>
-                                        IL3D, a large-scale dataset with 27,816 indoor layouts and 29,215 3D assets, supports LLM-driven 3D scene generation. It includes natural language annotations and rigorous benchmarks, enhancing the 3D scene generation task.
-                                    </p>
+                                    <a href="project/IL3D">project page</a> / <a href="https://arxiv.org/abs/2510.12095">arXiv</a> / <a href="javascript:void(0)" onclick="showBibtex('il3d')">BibTeX</a> / <a href="https://github.com/WenxuZhou/IL3D">code</a> / <a href="https://huggingface.co/datasets/WenxuZhou/IL3D">dataset</a>
+                                    <p>IL3D supports LLM-driven 3D scene generation with 27,816 indoor layouts.</p>
                                 </td>
                             </tr>
 
-                            <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+                            <tr>
                                 <td style="padding:16px;width:20%;vertical-align:middle">
-                                    <div class="one">
-                                        <img src='paper/EndoLGS.png' width=100%>
-                                    </div>
-                                    <script type="text/javascript">
-                                        function ever_start() {
-                                            document.getElementById('ever_image').style.opacity = "1";
-                                        }
-                                        function ever_stop() {
-                                            document.getElementById('ever_image').style.opacity = "0";
-                                        }
-                                        ever_stop()
-                                    </script>
+                                    <div class="one"><img src='paper/EndoLGS.png' width=100%></div>
                                 </td>
                                 <td style="padding:8px;width:80%;vertical-align:middle">
                                     <span class="papertitle"><a href="https://ieeexplore.ieee.org/document/11356947">Open-Vocabulary Endoscopic Scene Understanding via 4D Language Gaussian Splatting</a></span>
                                     <br>
-                                    <strong>Wenxu Zhou</strong>,
-                                    <a href="https://eeis.ustc.edu.cn/2015/0721/c2615a19458/page.htm">Dong Yin</a>
+                                    <strong>Wenxu Zhou</strong>, <a href="https://eeis.ustc.edu.cn/2015/0721/c2615a19458/page.htm">Dong Yin</a>
                                     <br>
                                     <em>BIBM</em>, 2025
                                     <br>
-                                    <a href="https://ieeexplore.ieee.org/document/11356947">paper</a>
-                                    /
-                                    <a href="javascript:void(0)" onclick="showBibtex('endolgs')">BibTeX</a>
-                                    /
-                                    <a href="https://github.com/WenxuZhou/EndoLGS">code</a>
-                                    <p></p>
-                                    <p>
-                                        EndoLGS, a 4D Language Gaussian Splatting for endoscopic scenes dynamic reconstruction and semantic understanding, shows significant potential for robot-assisted surgery.
-                                    </p>
+                                    <a href="https://ieeexplore.ieee.org/document/11356947">paper</a> / <a href="javascript:void(0)" onclick="showBibtex('endolgs')">BibTeX</a> / <a href="https://github.com/WenxuZhou/EndoLGS">code</a>
+                                    <p>EndoLGS enables semantic understanding in endoscopic scenes.</p>
                                 </td>
                             </tr>
 
-                            <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+                            <tr>
                                 <td style="padding:16px;width:20%;vertical-align:middle">
-                                    <div class="one">
-                                        <img src='paper/Endo2DGS.png' width=100%>
-                                    </div>
-                                    <script type="text/javascript">
-                                        function ever_start() {
-                                            document.getElementById('ever_image').style.opacity = "1";
-                                        }
-                                        function ever_stop() {
-                                            document.getElementById('ever_image').style.opacity = "0";
-                                        }
-                                        ever_stop()
-                                    </script>
+                                    <div class="one"><img src='paper/Endo2DGS.png' width=100%></div>
                                 </td>
                                 <td style="padding:8px;width:80%;vertical-align:middle">
                                     <span class="papertitle"><a href="https://link.springer.com/chapter/10.1007/978-981-95-5634-2_1">Endo2DGS: Endoscopic Scene Reconstruction with High-fidelity Geometry</a></span>
                                     <br>
-                                    <strong>Wenxu Zhou</strong>,
-                                    <a href="https://https://ieeexplore.ieee.org/author/817756958811659">Taoran Sun</a>,
-                                    <a href="">Tianle Hu</a>,
-                                    <a href="">Jiulin Li</a>,
-                                    <a href="https://eeis.ustc.edu.cn/2015/0721/c2615a19458/page.htm">Dong Yin</a>
+                                    <strong>Wenxu Zhou</strong>, Taoran Sun, Tianle Hu, Jiulin Li, <a href="https://eeis.ustc.edu.cn/2015/0721/c2615a19458/page.htm">Dong Yin</a>
                                     <br>
                                     <em>PRCV</em>, 2025
                                     <br>
-                                    <a href="https://link.springer.com/chapter/10.1007/978-981-95-5634-2_1">paper</a>
-                                    /
-                                    <a href="javascript:void(0)" onclick="showBibtex('endo2dgs')">BibTeX</a>
-                                    <p></p>
-                                    <p>
-                                        Endo2DGS, a novel reconstruction framework for endoscopic scenes, addresses geometric inconsistencies in dynamic digestive tract modeling, achieving high-fidelity 4D reconstruction.
-                                    </p>
+                                    <a href="https://link.springer.com/chapter/10.1007/978-981-95-5634-2_1">paper</a> / <a href="javascript:void(0)" onclick="showBibtex('endo2dgs')">BibTeX</a>
+                                    <p>High-fidelity 4D reconstruction for digestive tract modeling.</p>
                                 </td>
                             </tr>
-
                         </tbody>
                     </table>
 
@@ -266,19 +195,14 @@
                             </tr>
                         </tbody>
                     </table>
-
+                    
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
                             <tr>
                                 <td style="padding:0px">
                                     <br>
                                     <p style="text-align:right;font-size:small;">
-                                        <script type="text/javascript">
-                                            var t = new Date();
-                                            document.write('&copy; ' + t.getFullYear() + ' Wenxu Zhou. All Rights Reserved.');
-                                        </script>
-                                        <br>
-                                        Web Template @ <a href="https://github.com/jonbarron/jonbarron_website">Here</a>.
+                                        &copy; 2026 Wenxu Zhou. Web Template @ <a href="https://github.com/jonbarron/jonbarron_website">Here</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -292,7 +216,7 @@
     <div id="bibtexModal" class="modal">
       <div class="modal-content">
         <span class="close-bib" onclick="closeModal()">&times;</span>
-        <h3 style="margin-top: 0; font-family: 'Lato', Verdana, Helvetica, sans-serif;">BibTeX Citation</h3>
+        <h3 class="modal-title">BibTeX Citation</h3>
         <div class="bibtex-container">
             <button class="copy-btn" onclick="copyBibtex()">Copy</button>
             <pre id="bibtex-text"></pre>
@@ -301,8 +225,7 @@
     </div>
 
     <script>
-    function showBibtex(paperId) {
-      const bibtexData = {
+    const bibtexData = {
         'il3d': `@article{zhou2025il3d,
   title={Il3d: A large-scale indoor layout dataset for llm-driven 3d scene generation},
   author={Zhou, Wenxu and Nie, Kaixuan and Du, Hang and Yin, Dong and Huang, Wei and Guo, Siqiang and Zhang, Xiaobo and Hu, Pengbo},
@@ -325,16 +248,17 @@
   year={2025},
   organization={Springer}
 }`
-      };
+    };
 
+    function showBibtex(paperId) {
       var modal = document.getElementById("bibtexModal");
       var text = document.getElementById("bibtex-text");
       var btn = document.querySelector(".copy-btn");
       if(btn) btn.innerText = "Copy"; 
       
       if (bibtexData[paperId]) {
-        text.innerHTML = bibtexData[paperId];
-        modal.style.display = "block";
+        text.innerText = bibtexData[paperId];
+        modal.style.display = "flex";
       }
     }
 
@@ -345,24 +269,15 @@
     function copyBibtex() {
         var text = document.getElementById("bibtex-text").innerText;
         var btn = document.querySelector(".copy-btn");
-
         navigator.clipboard.writeText(text).then(function() {
-            var originalText = btn.innerText;
             btn.innerText = "Copied!";
-            
-            setTimeout(function() {
-                btn.innerText = "Copy";
-            }, 2000);
-        }, function(err) {
-            console.error('Could not copy text: ', err);
+            setTimeout(function() { btn.innerText = "Copy"; }, 2000);
         });
     }
 
     window.onclick = function(event) {
       var modal = document.getElementById("bibtexModal");
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
+      if (event.target == modal) { modal.style.display = "none"; }
     }
     </script>
 </body>
