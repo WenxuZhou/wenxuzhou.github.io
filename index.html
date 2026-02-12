@@ -23,7 +23,7 @@
                                     <p class="name" style="text-align: center;">Wenxu Zhou</p>
                                     <p>
                                         I am a master student at <a href="https://www.ustc.edu.cn/">University of Science and Technology of China</a>,
-                                        and supervised by <a href="https://eeis.ustc.edu.cn/2015/0721/c2615a19458/page.htm">Prof. Dong Yin</a> in <a href="https://eeis.ustc.edu.cn/main.htm">EEIS Department</a>.
+                                        and supervised by <a href="https://eeis.ustc.edu.cn/2015/0721/c2615a19458/page.htm">Prof. Dong Yin</a> in <a href="https://eeis.ustc.edu.cn/main.htm">Department of EEIS</a>.
                                         Before that, I received my bachelor’s degree in Electronics Information Engineering at <a href="https://www.ahu.edu.cn/">Anhui University</a>.
                                     </p>
                                     <p>
@@ -130,6 +130,8 @@
                                     /
                                     <a href="https://arxiv.org/abs/2510.12095">arXiv</a>
                                     /
+                                    <a href="javascript:void(0)" onclick="showBibtex('il3d')">BibTeX</a>
+                                    /
                                     <a href="https://github.com/WenxuZhou/IL3D">code</a>
                                     /
                                     <a href="https://huggingface.co/datasets/WenxuZhou/IL3D">dataset</a>
@@ -164,6 +166,8 @@
                                     <em>BIBM</em>, 2025
                                     <br>
                                     <a href="https://ieeexplore.ieee.org/document/11356947">paper</a>
+                                    /
+                                    <a href="javascript:void(0)" onclick="showBibtex('endolgs')">BibTeX</a>
                                     /
                                     <a href="https://github.com/WenxuZhou/EndoLGS">code</a>
                                     <p></p>
@@ -200,6 +204,8 @@
                                     <em>PRCV</em>, 2025
                                     <br>
                                     <a href="https://link.springer.com/chapter/10.1007/978-981-95-5634-2_1">paper</a>
+                                    /
+                                    <a href="javascript:void(0)" onclick="showBibtex('endo2dgs')">BibTeX</a>
                                     <p></p>
                                     <p>
                                         Endo2DGS, a novel reconstruction framework for endoscopic scenes, addresses geometric inconsistencies in dynamic digestive tract modeling, achieving high-fidelity 4D reconstruction.
@@ -282,5 +288,82 @@
             </tr>
         </tbody>
     </table>
-</body>
 
+    <div id="bibtexModal" class="modal">
+      <div class="modal-content">
+        <span class="close-bib" onclick="closeModal()">&times;</span>
+        <h3 style="margin-top: 0; font-family: 'Lato', Verdana, Helvetica, sans-serif;">BibTeX Citation</h3>
+        <div class="bibtex-container">
+            <button class="copy-btn" onclick="copyBibtex()">Copy</button>
+            <pre id="bibtex-text"></pre>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    function showBibtex(paperId) {
+      const bibtexData = {
+        'il3d': `@article{zhou2025il3d,
+  title={Il3d: A large-scale indoor layout dataset for llm-driven 3d scene generation},
+  author={Zhou, Wenxu and Nie, Kaixuan and Du, Hang and Yin, Dong and Huang, Wei and Guo, Siqiang and Zhang, Xiaobo and Hu, Pengbo},
+  journal={arXiv preprint arXiv:2510.12095},
+  year={2025}
+}`,
+        'endolgs': `@inproceedings{zhou2025open,
+  title={Open-Vocabulary Endoscopic Scene Understanding via 4D Language Gaussian Splatting},
+  author={Zhou, Wenxu and Yin, Dong},
+  booktitle={2025 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
+  pages={7184--7191},
+  year={2025},
+  organization={IEEE}
+}`,
+        'endo2dgs': `@inproceedings{zhou2025endo2dgs,
+  title={Endo2DGS: Endoscopic Scene Reconstruction with High-Fidelity Geometry},
+  author={Zhou, Wenxu and Sun, Taoran and Hu, Tianle and Li, Jiulin and Yin, Dong},
+  booktitle={Chinese Conference on Pattern Recognition and Computer Vision (PRCV)},
+  pages={3--18},
+  year={2025},
+  organization={Springer}
+}`
+      };
+
+      var modal = document.getElementById("bibtexModal");
+      var text = document.getElementById("bibtex-text");
+      var btn = document.querySelector(".copy-btn");
+      if(btn) btn.innerText = "Copy"; 
+      
+      if (bibtexData[paperId]) {
+        text.innerHTML = bibtexData[paperId];
+        modal.style.display = "block";
+      }
+    }
+
+    function closeModal() {
+      document.getElementById("bibtexModal").style.display = "none";
+    }
+    
+    function copyBibtex() {
+        var text = document.getElementById("bibtex-text").innerText;
+        var btn = document.querySelector(".copy-btn");
+
+        navigator.clipboard.writeText(text).then(function() {
+            var originalText = btn.innerText;
+            btn.innerText = "Copied!";
+            
+            setTimeout(function() {
+                btn.innerText = "Copy";
+            }, 2000);
+        }, function(err) {
+            console.error('Could not copy text: ', err);
+        });
+    }
+
+    window.onclick = function(event) {
+      var modal = document.getElementById("bibtexModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+</body>
+</html>
