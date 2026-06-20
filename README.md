@@ -1,2 +1,2 @@
 # wenxuzhou.github.io
-Wenxu Zhou's public academic website
+This is Wenxu Zhou's public academic website: https://wenxuzhou.github.io/.
